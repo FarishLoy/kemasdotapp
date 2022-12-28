@@ -68,6 +68,10 @@
   cursor: pointer;
 }
 
+.emailButton:hover {
+  background-color: #4297A0;
+}
+
 .emailInput {
   width: 332px;
   height: 46px;
