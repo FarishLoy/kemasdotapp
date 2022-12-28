@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import iphoneImage from '../assets/iphone.png'
 
 export default function Home() {
   const onEmailSubmit = () => {
@@ -30,6 +31,16 @@ export default function Home() {
           <input placeholder='Email address' type="email" className={styles.emailInput} />
           <button type='submit' onClick={onEmailSubmit} className={styles.emailButton}>JOIN WAITLIST</button>
         </form>
+        <div className={styles.imageContainer}>
+          <div className={styles.featureList}>
+            <p>Set reading goals</p>
+            <p>Track and record progress</p>
+            <p>Smart reminders</p>
+            <p>Set goals with friends</p>
+            <p>Tailored book recommendations</p>
+          </div>
+          <Image src={iphoneImage} alt="an iphone" width={300} height={600} />
+        </div>
       </main>
       <footer className={styles.footer}>
       </footer>
