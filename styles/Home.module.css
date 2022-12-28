@@ -113,13 +113,19 @@
   justify-content: space-between;
 }
 
-.featureList p {
+.feature p {
   color: #2F5061;
-  font-size: 30px;
+  font-size: 32px;
   margin: 0;
   line-height: 1.15;
   font-weight: 600;
-  margin-top: 10px;
+  flex: 1;
+  margin-left: 6px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
 }
 
 .title,

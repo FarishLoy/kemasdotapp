@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { CalendarClearOutline, FolderOpenOutline, AlarmOutline, PeopleCircleOutline, BookOutline } from 'react-ionicons'
+
 import styles from '../styles/Home.module.css'
 import iphoneImage from '../assets/iphone.png'
 
@@ -33,11 +35,26 @@ export default function Home() {
         </form>
         <div className={styles.imageContainer}>
           <div className={styles.featureList}>
-            <p>Set reading goals</p>
-            <p>Track and record progress</p>
-            <p>Smart reminders</p>
-            <p>Set goals with friends</p>
-            <p>Tailored book recommendations</p>
+            <div className={styles.feature}>
+              <CalendarClearOutline height='32px' width='32px' color='#2F5061' />
+              <p>Set reading goals</p>
+            </div>
+            <div className={styles.feature}>
+              <FolderOpenOutline height='32px' width='32px' color='#2F5061' />
+              <p>Track and record progress</p>
+            </div>
+            <div className={styles.feature}>
+              <AlarmOutline height='32px' width='32px' color='#2F5061' />
+              <p>Smart reminders</p>
+            </div>
+            <div className={styles.feature}>
+              <PeopleCircleOutline height='32px' width='32px' color='#2F5061' />
+              <p>Set goals with friends</p>
+            </div>
+            <div className={styles.feature}>
+              <BookOutline height='32px' width='32px' color='#2F5061' />
+              <p>Tailored book recommendations</p>
+            </div>
           </div>
           <Image src={iphoneImage} alt="an iphone" width={300} height={600} />
         </div>
