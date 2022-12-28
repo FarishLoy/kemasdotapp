@@ -49,6 +49,37 @@
   margin-left: 10px;
 }
 
+.emailForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emailButton {
+  width: 180px;
+  height: 46px;
+  border: 1px solid #2F5061;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 40px 0;
+  background-color: #2F5061;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.emailInput {
+  width: 332px;
+  height: 46px;
+  border: 1px solid #2F5061;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 40px 10px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+
 .subTitle {
   color: #2F5061;
   font-size: 20px;
@@ -60,7 +91,6 @@
 }
 
 .header {
-  border: 1px solid #2F5061;
   height: 80px;
   align-items: center;
   display: flex;
@@ -133,14 +163,4 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
 }
