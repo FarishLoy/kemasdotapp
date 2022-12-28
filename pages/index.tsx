@@ -60,6 +60,7 @@ export default function Home() {
         </div>
       </main>
       <footer className={styles.footer}>
+        <p>Built and developed by<a href="https://twitter.com/farish_15"> Farish Noorhisham</a></p>
       </footer>
     </div>
   )
