@@ -26,7 +26,7 @@ export default async function handler(
         await doc.loadInfo()
         const sheet = doc.sheetsByIndex[0];
 
-        await sheet.addRow({ email: email, timeStamp: new Date().getTime() })
+        await sheet.addRow({ email: email, timestamp: new Date().getTime() })
 
 
         return res.status(200).json({ email: req.query.email })
