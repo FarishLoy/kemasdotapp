@@ -38,7 +38,7 @@ export default function Home() {
         <p className={styles.subTitle}>
           Set goals, keep track, and achieve your 2023 reading goals.
         </p>
-        <form className={styles.emailForm}>
+        <form className={styles.emailForm} action="https://kemas.app/api/submitEmail" method="GET">
           <div style={{display: 'flex', flexDirection: 'column'}} className={styles.emailInputContainer}>
             <input onChange={onEmailChange} alt="email address input" name='email' id='email-input' placeholder='Email address' type="email" className={styles.emailInput} />
           </div>
