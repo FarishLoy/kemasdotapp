@@ -51,7 +51,7 @@
 
 .emailForm {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
@@ -68,6 +68,19 @@
   cursor: pointer;
 }
 
+.emailButton:disabled {
+  width: 180px;
+  height: 46px;
+  border: 1px solid #2F5061;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 40px 0;
+  background-color: #2F5061 !important;
+  color: white;
+  font-size: 16px;
+  cursor: auto;
+}
+
 .emailButton:hover {
   background-color: #4297A0;
 }
@@ -78,10 +91,13 @@
   border: 1px solid #2F5061;
   border-radius: 5px;
   padding: 0 10px;
-  margin: 40px 10px;
   background-color: white;
   color: black;
   font-size: 16px;
+}
+
+.emailInputContainer {
+  margin: 40px 10px;
 }
 
 .subTitle {

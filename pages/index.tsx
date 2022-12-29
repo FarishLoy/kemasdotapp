@@ -4,10 +4,19 @@ import { CalendarClearOutline, FolderOpenOutline, AlarmOutline, PeopleCircleOutl
 
 import styles from '../styles/Home.module.css'
 import iphoneImage from '../assets/iphone.png'
+import { useState } from 'react'
 
 export default function Home() {
+  const [email, setEmail] = useState<string>('')
+  const [isValidEmail, setIsValidEmail] = useState<boolean>(false)
+  
   const onEmailSubmit = () => {
     console.log('hello')
+  }
+
+  const onEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value)
+    setIsValidEmail(/(.+)@(.+){2,}\.(.+){2,}/.test(e.target.value))
   }
 
   return (
@@ -30,8 +39,10 @@ export default function Home() {
           Set goals, keep track, and achieve your 2023 reading goals.
         </p>
         <form className={styles.emailForm}>
-          <input placeholder='Email address' type="email" className={styles.emailInput} />
-          <button type='submit' onClick={onEmailSubmit} className={styles.emailButton}>JOIN WAITLIST</button>
+          <div style={{display: 'flex', flexDirection: 'column'}} className={styles.emailInputContainer}>
+            <input onChange={onEmailChange} alt="email address input" name='email' id='email-input' placeholder='Email address' type="email" className={styles.emailInput} />
+          </div>
+          <button disabled={!isValidEmail} type='submit' onClick={onEmailSubmit} className={styles.emailButton}>JOIN WAITLIST</button>
         </form>
         <div className={styles.imageContainer}>
           <div className={styles.featureList}>
