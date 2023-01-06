@@ -215,10 +215,19 @@
   align-items: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .imageContainer {
+    flex-direction: column;
+    padding: 0px 30px;
+  }
+
+  .featureList { 
+    margin: 30px 0;
   }
 }
 
